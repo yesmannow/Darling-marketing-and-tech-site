@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-sapphire text-icySilver font-body tracking-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading tracking-heading;
+}
+
+code,
+pre,
+kbd,
+samp {
+  @apply font-mono;
+}
+
+@keyframes noise-shift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  10% {
+    transform: translate3d(-2%, -3%, 0);
+  }
+  20% {
+    transform: translate3d(-5%, 2%, 0);
+  }
+  30% {
+    transform: translate3d(3%, -5%, 0);
+  }
+  40% {
+    transform: translate3d(-1%, 4%, 0);
+  }
+  50% {
+    transform: translate3d(5%, -2%, 0);
+  }
+  60% {
+    transform: translate3d(-3%, 1%, 0);
+  }
+  70% {
+    transform: translate3d(2%, 5%, 0);
+  }
+  80% {
+    transform: translate3d(-4%, -1%, 0);
+  }
+  90% {
+    transform: translate3d(1%, -4%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.noise-overlay {
+  animation: noise-shift 1.8s steps(2) infinite;
+}
+
